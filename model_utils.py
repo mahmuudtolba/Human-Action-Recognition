@@ -8,7 +8,7 @@ def create_model():
 
 
     model = Sequential([
-    LSTM(64, return_sequences=True, activation='relu', input_shape=(30,1662)),
+    LSTM(64, return_sequences=True, activation='relu', input_shape=(50,1662)),
     LSTM(128, return_sequences=True, activation='relu'),
     LSTM(64, return_sequences=False, activation='relu'),
     Dense(64, activation='relu'),
