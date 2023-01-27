@@ -118,7 +118,7 @@ def collecting_data(mp_holistic_model , mp_drawing, actions , no_sequences ,sequ
                                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
                                 cv2.imshow('OpenCV Feed' , frame)
                                 #that break is for each video of each actions 
-                                cv2.waitKey(2000)
+                                cv2.waitKey(5000)
 
                             else :
                                 cv2.putText(frame, '{} Video Number {}'.format(action, sequence), (30,30), 
