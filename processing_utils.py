@@ -19,7 +19,7 @@ def explore_model(mp_holistic_model , mp_drawing ):
             draw_styled_landmarsks(mp_drawing , mp_holistic_model , frame , results)
             #showing to the screen
             cv2.putText(frame, 'Press q to quit', (15,20), 
-                                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255, 0), 1, cv2.LINE_AA)
+                                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255, 0), 2, cv2.LINE_AA)
             cv2.imshow('Opencv read' , frame)
 
             if cv2.waitKey(10) & 0xff == ord('q'):
@@ -93,8 +93,9 @@ def make_dir(DATA_PATH , actions, no_sequences ):
 
 
 def collecting_data(mp_holistic_model , mp_drawing, actions , no_sequences ,sequences_length,DATA_PATH ):
-    if input('Are you ready for collecting data ?') == 'y':
-        if input('CAUTION!!, You would overwrite the data you have') == 'y':
+    if input('Are you ready for collecting data ? Please press y or n.\n') == 'y':
+        if input('''CAUTION!! \n,
+         You would overwrite the data you have Please press y or n.\n ''') == 'y':
             cap = cv2.VideoCapture(0)
             #so here we are setting mpmodel
             with mp_holistic_model.Holistic(min_detection_confidence=0.5 , min_tracking_confidence=0.5) as holistic :
