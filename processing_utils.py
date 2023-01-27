@@ -114,15 +114,15 @@ def collecting_data(mp_holistic_model , mp_drawing, actions , no_sequences ,sequ
                             if frame_num == 0:
                                 cv2.putText(frame, 'STARTING COLLECTION', (120,200), 
                                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255, 0), 4, cv2.LINE_AA)
-                                cv2.putText(frame, 'Collecting frames for {} Video Number {}'.format(action, sequence), (15,12), 
-                                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
+                                cv2.putText(frame, '{} Video Number {}'.format(action, sequence), (30,30), 
+                                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
                                 cv2.imshow('OpenCV Feed' , frame)
                                 #that break is for each video of each actions 
                                 cv2.waitKey(2000)
 
                             else :
-                                cv2.putText(frame, 'Collecting frames for {} Video Number {}'.format(action, sequence), (15,12), 
-                                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
+                                cv2.putText(frame, '{} Video Number {}'.format(action, sequence), (30,30), 
+                                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
                                 # Show to screen
                                 cv2.imshow('OpenCV Feed', frame)
 

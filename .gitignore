@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 MP_Data
 # C extensions
+MP_Data.rar
 *.so
 .ipynb_checkpoints
 # Distribution / packaging
