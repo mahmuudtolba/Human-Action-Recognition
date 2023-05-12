@@ -5,3 +5,4 @@ sklearn
 matplotlib
 numpy
 cvzone
+pyttsx3
