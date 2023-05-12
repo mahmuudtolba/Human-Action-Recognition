@@ -1,4 +1,3 @@
 conda create -n gproject python==3.9.7
-conda create gproject
 pip install -r requirments.txt
 python connect_separately.py
