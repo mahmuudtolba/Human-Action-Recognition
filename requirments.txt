@@ -4,3 +4,4 @@ mediapipe
 sklearn
 matplotlib
 numpy
+cvzone
