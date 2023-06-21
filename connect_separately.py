@@ -27,8 +27,7 @@ def action_recognation():
     threshold = 0.85
     d = 0
     timer = 1 
-    st = time.time()
-    order = ['get ready' , 'open the bag' , 'put the book in the bag']
+    order = ['get ready' , 'open your bag' , 'put your book in the bag']
     
     with mp_holistic_model.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
         while order:
@@ -109,9 +108,8 @@ def action_recognation():
   
                 # Show to screen
                 cv2.imshow('OpenCV Feed', frame)
-                et = time.time()
                 # Break gracefully
-                if ( cv2.waitKey(10) & 0xFF == ord('q') ) or (et - st > 60) or len(order) == 0:
+                if ( cv2.waitKey(10) & 0xFF == ord('q') )  or len(order) == 0:
                     engine.say(f"You have successfully completed the task ")
                     engine.runAndWait()
                     face_expression()
@@ -174,7 +172,7 @@ def face_expression():
                     label=emotion_labels[prediction_expression.argmax()]
                     labels.append(label)
 
-            if len(labels) == 15 :
+            if len(labels) == 10 :
                 expression = Counter(labels).most_common(1)[0][0]
                 r.put(f'https://flutter-app-79e87-default-rtdb.firebaseio.com/status.json', json.dumps({'feel' : expression}))
                 r.put(URL ,json.dumps('stop'))
