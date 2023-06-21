@@ -27,7 +27,7 @@ def action_recognation():
     threshold = 0.85
     d = 0
     timer = 1 
-    order = ['get ready' , 'open your bag' , 'put your book in the bag']
+    order = ['get ready' , 'open your bag' , 'put your book in your bag']
     
     with mp_holistic_model.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
         while order:
