@@ -7,7 +7,7 @@ mp_drawing = mp.solutions.drawing_utils
 
 from processing_utils import make_dir
 #that is the path for exported data
-actions = np.array(['open' , 'put' , 'close' , 'stand'])
+actions = np.array(['open' , 'put' , 'stand'])
 
 DATA_PATH = 'mediapipe_data'
 for action in actions:
